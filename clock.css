@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Default to dark theme */
+    color: #fff; /* White text for dark theme */
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  .clock-container {
+    text-align: center;
+  }
+  
+  #clock {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease; /* Initial fade-in animation */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Theme Styles */
+  body.light {
+    background-color: #f0f0f0;
+    color: #000;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  body.colorful {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff9b54, #ffeb3b);
+    background-size: 400% 400%;
+    color: #fff;
+    animation: gradientAnimation 10s infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  #clock.light {
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease;
+    animation: zoomIn 0.8s ease; /* Zoom effect for theme change */
+  }
+  
+  #clock.dark {
+    background-color: #222;
+    color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease;
+    animation: zoomIn 0.8s ease;
+  }
+  
+  #clock.colorful {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease;
+    animation: zoomIn 0.8s ease;
+  }
+  
+  /* Zoom effect */
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    animation: fadeIn 0.8s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  select:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
